@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ .Page.Title }}</title>
+	{{ $style := resources.Get "sass/main.scss" | css.Sass | resources.Minify }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
+<body>
+	<header id="masthead" class="site-header">
+		<div class="row">
+			<div class="col-12 col-m-12"> 
+			<h1 id="site-title"> 
+				<a href="{{ absURL ``}}">gorman.zone</a>
+			</h1>
+			</div> 
+		</div>
+		<div class="row">
+			<div class="col-12 col-m-12 navigation">
+					<h2>
+						<a href="{{ absURL `about` }}">about</a> |
+						<a href="{{ absURL ``}}">blog</a> |
+						<a href="{{ absURL `projects` }}">projects</a>
+					</h2>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+	 {{ block "main" . }}
+	 {{ end }}
+	</div>
+</body>
+</html>

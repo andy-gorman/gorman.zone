@@ -2,7 +2,7 @@
     "title": "About Me"
 }
 
-Hey there! My name is Andy Gorman. I am a software developer in Cambridge, MA. 
+Hey there! My name is Andy Gorman. I am a software developer in Brooklyn, NY
 I aim to work with folks to make the web a better, more inclusive place, and put work into the world that connects with and inspires others.
 
 Some folks/companies who's work inspires me includes, but is not limited to the following.
@@ -12,8 +12,6 @@ Some folks/companies who's work inspires me includes, but is not limited to the 
 * [Chappell Ellison](http://chappellellison.com/)
 * [Panic Software](https://panic.com)
 * [Campo Santo](https://www.camposanto.com/)
-* [Fullbright](https://fullbrig.ht/)
-* [Fog Creek](http://www.fogcreek.com/)
 
 Here are some various ways you can find/contact me online
 * Email - <hi@gorman.zone>

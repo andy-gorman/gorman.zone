@@ -1,0 +1,18 @@
+{{ $apiURL := .Site.Params.apiURL }}
+{{ with resources.Get "js/fetch-livetrack.js" }}
+  {{$opts := dict
+		"params" (dict "apiURL" $apiURL)
+    "minify" (not hugo.IsDevelopment)
+    "sourceMap" (cond hugo.IsDevelopment "external" "")
+    "targetPath" "js/fetch-livetrack.js"
+  }}
+  {{ with . | js.Build $opts }}
+    {{ if hugo.IsDevelopment }}
+			<script src="{{ .RelPermalink }}"></script>
+    {{ else }}
+      {{ with . | fingerprint }}
+				<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>`
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

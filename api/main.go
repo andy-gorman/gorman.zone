@@ -10,7 +10,6 @@ import (
 
 	"github.com/andy-gorman/gorman.zone/api/fastmail"
 	"github.com/andy-gorman/gorman.zone/api/garmin"
-	"github.com/joho/godotenv"
 )
 
 type Env struct {
@@ -19,12 +18,6 @@ type Env struct {
 }
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		slog.Error("Could not load .env file", "err", err.Error())
-		os.Exit(1)
-	}
-
 	client := fastmail.NewEmailClient(
 		os.Getenv("FASTMAIL_AUTH_URL"),
 		os.Getenv("FASTMAIL_AUTH_TOKEN"),

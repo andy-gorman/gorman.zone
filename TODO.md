@@ -1,0 +1,8 @@
+- [ ] Ignore Cache For live track call (for now)
+  - [ ] Smarter caching (eTAGS...Add data to in memory store of urls)
+- [ ] Fix double request to livetrack API
+- [ ] Fix styling on garmin iframe
+- [ ] Build + Publish docker file in CI (probably github to start)
+- [ ] Pull + start dockerfile on VPS
+- [ ] Deploy frontend in CI
+- [ ] Split frontend and backend (?)

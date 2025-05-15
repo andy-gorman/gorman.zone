@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Author: Andy Gorman
+
+set -e
+
+pushd $(dirname "${BASH_SOURCE[0]}")/.. &> /dev/null
+
+if $(docker inspect -f '{{.State.Status}}' gorman-api | grep -q "running"); then
+	docker container stop gorman-api
+fi
+
+docker build -f api/Dockerfile ./api/ --tag docker-gorman-api 
+docker run -d --env-file ./api/.env --publish 127.0.0.1:3333:3333 --name gorman-api docker-gorman-api
+
+
+popd &> /dev/null

@@ -8,7 +8,7 @@
     wrapperClass="garmin-livetrack-wrapper"
     id="garmin-livetrack"
     class="garmin-livetrack"
-    src="about:blank"
+    iframeUrl="about:blank"
 >}}
 
 

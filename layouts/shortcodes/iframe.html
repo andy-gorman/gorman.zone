@@ -2,7 +2,7 @@
 <iframe 
 	id="{{ .Params.id }}"
 	class="{{ .Params.class }}"
-	src="{{ .Params.src }}"
+	src="{{ .Params.iframeUrl | safeURL }}"
 >
 </iframe>
 </div>

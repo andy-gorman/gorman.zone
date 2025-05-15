@@ -34,9 +34,10 @@ func main() {
 
 	http.HandleFunc("/garmin-live-track", env.handler())
 
-	err = http.ListenAndServe("127.0.0.1:3333", nil)
+	err := http.ListenAndServe(":3333", nil)
 	if errors.Is(err, http.ErrServerClosed) {
 		slog.Info("server closed\n")
+
 	} else if err != nil {
 		slog.Error("error starting server", "error", err.Error())
 		os.Exit(1)

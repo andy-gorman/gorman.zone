@@ -1,7 +1,10 @@
 import * as params from '@params';
 
 window.addEventListener("load", async (event) => {
-	const response = await fetch(`${params.apiURL}/garmin-live-track`);
+	const response = await fetch(
+		`${params.apiURL}/garmin-live-track`,
+		{ cache: 'no-store' }
+	);
 	if (!response.ok) {
 		console.error(`Response status: ${response.status}`);
 		return;
@@ -12,5 +15,6 @@ window.addEventListener("load", async (event) => {
 		garminFrame.setAttribute("src", url);
 		return;
 	}
-	// TODO: Render text when Andy isn't riding when server returns an empty string
+	const frameWrapper = document.getElementById("garmin-livetrack-wrapper");
+	frameWrapper.innerHTML = `<h3>Andy is not riding right now. Check Back Later</h3>`;
 });

@@ -1,6 +1,6 @@
 import * as params from '@params';
 
-window.addEventListener("load", async (event) => {
+window.addEventListener("load", async () => {
 	const response = await fetch(
 		`${params.apiURL}/garmin-live-track`,
 		{ cache: 'no-store' }

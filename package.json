@@ -1,0 +1,21 @@
+{
+  "name": "gorman.zone",
+  "description": "My personal website",
+  "version": "0.1.0",
+  "main": "/dev/null",
+  "private": true,
+  "repository": "https://github.com/wincent/wincent.git",
+  "author": "Andy Gorman <hi@gorman.zone>",
+  "license": "Unlicense",
+  "scripts": {
+    "format": "bin/format",
+    "format:check": "bin/check-format"
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.8.1",
+    "@eslint/js": "^9.27.0",
+    "@eslint/markdown": "^6.4.0",
+    "eslint": "^9.27.0",
+    "globals": "^16.2.0"
+  }
+}

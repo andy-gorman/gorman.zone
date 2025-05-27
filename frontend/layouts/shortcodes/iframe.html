@@ -1,9 +1,8 @@
-<div id="{{ .Params.wrapperId }}" class="{{.Params.wrapperClass}}">
-<iframe 
-	id="{{ .Params.id }}"
-	class="{{ .Params.class }}"
-	src="{{ .Params.iframeUrl | safeURL }}"
->
-</iframe>
+<div id="{{ .Params.wrapperId }}" class="{{ .Params.wrapperClass }}">
+  <iframe
+    id="{{ .Params.id }}"
+    class="{{ .Params.class }}"
+    src="{{ .Params.iframeUrl | safeURL }}"
+  >
+  </iframe>
 </div>
-

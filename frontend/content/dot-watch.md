@@ -1,14 +1,13 @@
 {
-	"title": "Catch Andy On A Ride"
+"title": "Catch Andy On A Ride"
 }
 {{< livetrack >}}
- 
+
 {{< iframe
-    wrapperId="garmin-livetrack-wrapper"
-    wrapperClass="garmin-livetrack-wrapper"
-    id="garmin-livetrack"
-    class="garmin-livetrack"
-    iframeUrl="about:blank"
->}}
+wrapperId="garmin-livetrack-wrapper"
+wrapperClass="garmin-livetrack-wrapper"
+id="garmin-livetrack"
+class="garmin-livetrack"
+iframeUrl="about:blank"
 
-
+> }}

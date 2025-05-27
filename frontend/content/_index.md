@@ -1,4 +1,3 @@
 {
-	"title": "gorman.zone"
+"title": "gorman.zone"
 }
-

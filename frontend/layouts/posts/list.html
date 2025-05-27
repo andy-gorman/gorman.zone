@@ -1,17 +1,19 @@
 {{ define "main" }}
-	<div class="row">
-		<div class="col-m-12 col-12">
-			{{ range .Pages }}
-				<div class="entry">
-					<div class="entry-meta">
-						<h3 class="entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-						<div class="entry-date">{{ .Date.Format "January 2, 2006" }} </div>
-					</div>
-					<div class="entry">
-						<p class="entry-excerpt"> {{ .Summary }} </p>
-					</div>
-				</div>
-			{{ end }}
-		</div>
-	</div>
-	{{ end }}
+  <div class="row">
+    <div class="col-m-12 col-12">
+      {{ range .Pages }}
+        <div class="entry">
+          <div class="entry-meta">
+            <h3 class="entry-title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h3>
+            <div class="entry-date">{{ .Date.Format "January 2, 2006" }}</div>
+          </div>
+          <div class="entry">
+            <p class="entry-excerpt">{{ .Summary }}</p>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
 	margin: auto;
 	line-height: 1.2em;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: Ubuntu, sans-serif;
 }
 
 ul {
@@ -32,7 +32,11 @@ header {
 	text-align: center;
 	border-bottom: dashed;
 	padding-bottom: 15px;
-	border-width: 0 0 5px 0;
+	border-width: 0 0 5px;
+}
+
+a {
+	color: #600;
 }
 
 header a {
@@ -40,8 +44,32 @@ header a {
 	color: black;
 }
 
+/* Underline h2 links on hover */
+header h2 a {
+	position: relative;
+}
+
+header h2 a::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	bottom: -5px;
+	left: 0;
+	background-color: black;
+	transform: scaleX(0);
+	transition: all 0.3s ease-in-out 0s;
+}
+
+header h2 a:hover::after  {
+	transform: scaleX(1);
+}
+
+a:hover {
+	color: black;
+}
+
 header h1 {
-	
 	@media all and (min-width: $desktop-min) {
 		font-size: 60px;
 		margin-bottom: 40px;
@@ -62,36 +90,14 @@ header h2 {
 	@media all and (max-width: ($desktop-min - 1px)) {
 		font-size: 4.5vw;
 	}
+
 	margin: 0;
 }
 
-/* Underline h2 links on hover */
-header h2 a {
-	position: relative;
-}
-
-header h2 a:after {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 3px;
-	bottom: -5px;
-	left: 0;
-	background-color: black;
-	-webkit-transform: scaleX(0);
-	transform: scaleX(0);
-	-webkit-transition: all 0.3s ease-in-out 0s;
-	transition: all 0.3s ease-in-out 0s;
-}
-
-header h2 a:hover:after  {
-	-webkit-transform: scaleX(1);
-	transform: scaleX(1);
-}
 
 #site-title a,
 #site-title a:visited {
-	color: #000000;
+	color: #000;
 	text-decoration: none;
 }
 
@@ -103,14 +109,6 @@ header h2 a:hover:after  {
 .main {
 	margin: auto;
   min-height: inherit;
-}
-
-a {
-	color: #660000;
-}
-
-a:hover {
-	color: black;
 }
 
 .garmin-livetrack-wrapper {
@@ -139,7 +137,7 @@ a:hover {
 	max-width: 90%;
 	height: auto;
 	position: relative;
-	margin: 0 0 5vh 0;
+	margin: 0 0 5vh;
 }
 
 .image img {

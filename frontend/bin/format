@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Author: Andy Gorman
+
+set -e
+
+FRONTEND_ROOT="${BASH_SOURCE%/*}/.."
+
+cd "${REPO_ROOT}"
+
+bun run eslint .
+bun run stylelint "**/*.scss"

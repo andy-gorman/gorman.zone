@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Author: Andy Gorman
+
+set -e
+
+FRONTEND_ROOT="${BASH_SOURCE%/*}/.."
+
+pushd "${FRONTEND_ROOT}" &> /dev/null
+
+bun run eslint . --fix
+bun run stylelint "**/*.scss" --fix
+bun run prettier . --fix
+popd &> /dev/null

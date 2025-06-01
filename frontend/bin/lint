@@ -5,7 +5,9 @@ set -e
 
 FRONTEND_ROOT="${BASH_SOURCE%/*}/.."
 
-cd "${REPO_ROOT}"
+pushd "${FRONTEND_ROOT}" &> /dev/null
 
 bun run eslint .
 bun run stylelint "**/*.scss"
+bun run prettier . --check
+popd &> /dev/null

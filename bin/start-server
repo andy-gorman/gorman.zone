@@ -3,9 +3,9 @@
 
 set -e
 
-pushd $(dirname "${BASH_SOURCE[0]}")/.. &> /dev/null
+pushd "$(dirname "${BASH_SOURCE[0]}")"/.. &> /dev/null
 
-if $(docker inspect -f '{{.State.Status}}' gorman-api | grep -q "running"); then
+if docker inspect -f '{{.State.Status}}' gorman-api | grep -q "running"; then
 	docker container stop gorman-api
 fi
 

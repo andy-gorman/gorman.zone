@@ -3,4 +3,4 @@
 # Only meant to be used for me locally
 
 set -e
-$(hvm status --printExecPath) && rsync -avz --delete public/ root@staticsites.gorman.zone:/var/www/gorman.zone
+hugo && rsync -avz --delete public/ root@staticsites.gorman.zone:/var/www/gorman.zone

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Author: Andy Gorman
+
+set -e
+
+pushd "$(dirname "${BASH_SOURCE[0]}")"/.. &> /dev/null
+
+# Run shellcheck on all bash scripts
+git ls-files --exclude='*.sh' --ignored -c -z | xargs -0r shellcheck -P SCRIPTDIR -x
+
+git ls-files -c | while IFS= read -r file; do
+	if head -n1 "${file}" |grep -q "^#\\! \?/.\+\(ba|d|k\)\?sh" ; then
+		shellcheck -P SCRIPTDIR -x "${file}"
+	fi
+done
+
+./frontend/bin/lint
+./api/bin/lint
+
+
+popd &> /dev/null

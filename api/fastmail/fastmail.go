@@ -80,5 +80,5 @@ func (client *FastmailClient) FetchLivetrackEmail() (string, error) {
 			return "", errors.New(*r.Description)
 		}
 	}
-	return "", errors.New("No emails returned")
+	return "", errors.New("no emails returned")
 }

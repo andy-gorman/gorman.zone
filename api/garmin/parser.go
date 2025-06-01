@@ -25,7 +25,7 @@ func ParseLivetrackLinkFromEmail(htmlEmailBody string) (string, error) {
 		}
 	}
 
-	return "", errors.New("No links found in document")
+	return "", errors.New("no links found in document")
 }
 
 func IsLivetrackLinkActive(url string) bool {

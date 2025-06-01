@@ -4,5 +4,6 @@
 set -e
 
 pushd "$(dirname "${BASH_SOURCE[0]}")"/.. &> /dev/null
-
+# shellcheck disable=SC2046
+env $(xargs < .env) go run main.go
 popd &> /dev/null

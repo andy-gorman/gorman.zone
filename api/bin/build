@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Author: Andy Gorman
+
+set -e
+
+pushd "$(dirname "${BASH_SOURCE[0]}")"/.. &> /dev/null
+docker run --rm -it -v "$(pwd)":/home/golang/src -w /home/golang/src golang:1.24.2 env GOOS=linux GOARCH=amd64 go build -v -o dist/gorman-zone-api main.go
+popd &> /dev/null
+

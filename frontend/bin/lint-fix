@@ -9,5 +9,5 @@ pushd "${FRONTEND_ROOT}" &> /dev/null
 
 bun run eslint . --fix
 bun run stylelint "**/*.scss" --fix
-bun run prettier . --fix
+bun run prettier . --write
 popd &> /dev/null

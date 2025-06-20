@@ -10,4 +10,4 @@ id="garmin-livetrack"
 class="garmin-livetrack"
 iframeUrl="about:blank"
 
-> }}
+>}}
